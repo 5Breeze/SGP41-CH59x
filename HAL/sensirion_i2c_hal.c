@@ -33,6 +33,9 @@
 #include "sensirion_common.h"
 #include "sensirion_config.h"
 
+#include "app_i2c.h"
+#include "CH59x_common.h"
+#include "stdint.h"
 /*
  * INSTRUCTIONS
  * ============
@@ -119,5 +122,5 @@ int8_t sensirion_i2c_hal_write(uint8_t address, const uint8_t* data,
  */
 void sensirion_i2c_hal_sleep_usec(uint32_t useconds) {
     /* TODO:IMPLEMENT */
-    DelayUs(uint16_t(useconds));
+    DelayUs((uint16_t)(useconds));
 }
